@@ -1,0 +1,28 @@
+<! This was adapted from a post by Vitor Freitas on making REST calls to Django
+https://simpleisbetterthancomplex.com/tutorial/2018/02/03/how-to-use-restful-apis-with-django.html !>
+{% extends 'page.html' %}
+{% load crispy_forms_tags %}
+<script>
+  .asteriskField {
+    display: none;
+}
+</script>
+{% block content %}
+  <h2>Search for a word</h2>
+
+  <form method="get">
+    {{ form|crispy}}
+    <br>
+    <button type="submit" class= "btn btn-success">search</button>
+  </form>
+
+  {% if search_result %}
+   <hr>
+    <div style= "clear:none;">
+         <h3>{{search_result.0.word}}</h3>
+   </div>
+      <p>{{search_result.0.meanings.0.definitions.0.definition}}</p>
+    {% else %}
+      <p><em>{{ search_result.message }}</em></p>
+  {% endif %}
+{% endblock %}
