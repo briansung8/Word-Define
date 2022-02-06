@@ -7,7 +7,7 @@ Calls a search term and sends a URL request to the [Free Dictionary API](https:/
 # Technologies used
 The backend uses [Django](https://www.djangoproject.com) to setup a HTTP server that queries the REST API.
 <br>
-The frontend uses the [Bootstrap](https://getbootstrap.com) CSS framework. Also, [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest) is implemented to render the search form.
+The frontend uses the [Bootstrap](https://getbootstrap.com) CSS framework. Also, [PostgreSQL](https://www.postgresql.org/) is used for the data layer.
 # Acknowledgments
 I received guidance on implementing REST API calls through the tutorial ["How to Use RESTful APIs with Django"](https://simpleisbetterthancomplex.com/tutorial/2018/02/03/how-to-use-restful-apis-with-django.html) by Vitor Freitas.
 
