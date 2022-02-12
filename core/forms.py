@@ -1,4 +1,4 @@
-from ctypes.wintypes import WORD
+
 from django import forms
 from django.conf import settings
 import requests
